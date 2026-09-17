@@ -1,6 +1,6 @@
 ---
 title: How to configure Neovim
-description: The original MuVim GitHub Pages tutorial — motions, init.vim, plugins, and mappings, from scratch.
+description: The original MμVim GitHub Pages tutorial — motions, init.vim, plugins, and mappings, from scratch.
 permalink: /tutorial/
 ---
 
@@ -233,7 +233,7 @@ Take a minute to read those if you want. That is the common way to set those plu
 
 ## Mapping
 
-Mapping is a combination of keys that runs something. Let's map the plugins. Leader in MuVim is space, so these assume you set that (or you use the default and change `<Leader>`).
+Mapping is a combination of keys that runs something. Let's map the plugins. Leader in MμVim is space, so these assume you set that (or you use the default and change `<Leader>`).
 
 ```vim
 " coc

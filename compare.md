@@ -1,6 +1,6 @@
 ---
 title: Compare the three configs
-description: Language, plugin stack, installer, and who each MuVim config is actually for.
+description: Language, plugin stack, installer, and who each MμVim config is actually for.
 permalink: /compare/
 ---
 

@@ -1,12 +1,12 @@
 ---
-title: MuVim
+title: MμVim
 description: Three Vim/Neovim configs. Current, VimScript, and Mini.
 permalink: /
 ---
 
-<div class="mu-tree" aria-label="MuVim versions">
+<div class="mu-tree" aria-label="MμVim versions">
   <div class="mu-tree-root">
-    <img src="{{ '/assets/img/muVim.png' | relative_url }}" alt="MuVim">
+    <img src="{{ '/assets/img/muVim.png' | relative_url }}" alt="MμVim">
   </div>
   <div class="mu-tree-stem" aria-hidden="true"></div>
   <div class="mu-tree-row">
@@ -23,7 +23,7 @@ permalink: /
 </div>
 
 <div class="home-copy">
-  <p>MuVim started as one Neovim setup and split into three because a single file couldn't cover every machine. Leader is still Space, git still lives on the keyboard, and the editor still tries to feel like an IDE without leaving the terminal.</p>
+  <p>MμVim started as one Neovim setup and split into three because a single file couldn't cover every machine. Leader is still Space, git still lives on the keyboard, and the editor still tries to feel like an IDE without leaving the terminal.</p>
   <p><a href="{{ '/lua/' | relative_url }}">Current</a> is the Lua core and the one that still moves. Neovim only: Mason, Telescope, nvim-tree, and a chat talking to local Ollama, so new work lands here first.</p>
   <p><a href="{{ '/vimscript/' | relative_url }}">VimScript</a> is the modular LTS. It runs in Vim and Neovim, keeps CoC and vim-plug, and it's the one to keep if you want a full IDE without switching to Lua.</p>
   <p><a href="{{ '/mini/' | relative_url }}">Mini</a> is one <code>init.vim</code> you can read top to bottom, copy as a template, or take to a server.</p>

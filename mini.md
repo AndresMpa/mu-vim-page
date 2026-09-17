@@ -1,12 +1,12 @@
 ---
 title: Mini
-description: One init.vim. Vim and Neovim. The MuVim template, and the one you take to a server.
+description: One init.vim. Vim and Neovim. The MμVim template, and the one you take to a server.
 permalink: /mini/
 ---
 
 <span class="badge mini">Mini</span>
 
-[mu-vim-mini](https://github.com/AndresMpa/mu-vim-mini) is the single-file config. It was the first MuVim, used for about a year before the file got long enough to split, and it stayed because a readable `init.vim` is still the right shape for a template and for machines where you don't want a Lua plugin manager.
+[mu-vim-mini](https://github.com/AndresMpa/mu-vim-mini) is the single-file config. It was the first MμVim, used for about a year before the file got long enough to split, and it stayed because a readable `init.vim` is still the right shape for a template and for machines where you don't want a Lua plugin manager.
 
 It stays in sync with VimScript on features, so if something works there it should work here too, just all in one place.
 

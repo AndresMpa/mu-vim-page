@@ -1,6 +1,6 @@
 ---
 title: Cheat sheet
-description: Native Vim motions plus the MuVim leader maps. Skip the first tables if you already know hjkl.
+description: Native Vim motions plus the MμVim leader maps. Skip the first tables if you already know hjkl.
 permalink: /cheat-sheet/
 ---
 

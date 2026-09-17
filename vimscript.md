@@ -1,6 +1,6 @@
 ---
 title: VimScript (LTS)
-description: Modular VimScript for Vim and Neovim. CoC, vim-plug, and the long-lived MuVim IDE.
+description: Modular VimScript for Vim and Neovim. CoC, vim-plug, and the long-lived MμVim IDE.
 permalink: /vimscript/
 ---
 

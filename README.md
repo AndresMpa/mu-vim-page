@@ -1,6 +1,6 @@
-# MuVim documentation
+# MμVim documentation
 
-This repository is the GitHub Pages site for MuVim: three public Neovim/Vim configs, how they differ, who each one is for, and the original "build your own `init.vim`" tutorial.
+This repository is the GitHub Pages site for MμVim: three public Neovim/Vim configs, how they differ, who each one is for, and the original "build your own `init.vim`" tutorial.
 
 Live URL once Pages is on: <https://andresmpa.github.io/mu-vim-page/>
 

@@ -1,6 +1,6 @@
 ---
 title: Current
-description: The Current MuVim. Neovim + Lua, Mason LSP, Telescope, and a local Ollama chat.
+description: The Current MμVim. Neovim + Lua, Mason LSP, Telescope, and a local Ollama chat.
 permalink: /lua/
 ---
 

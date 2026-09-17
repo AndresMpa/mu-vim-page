@@ -20,7 +20,7 @@
       lua: {
         title: "Current",
         href: base + "/lua/",
-        why: "The Lua core and the one that still moves. Neovim only: Mason, Telescope, nvim-tree, and a chat talking to local Ollama."
+        why: "The Lua core and the one that still moves. Neovim only: Mason, Telescope, and nvim-tree."
       }
     };
 

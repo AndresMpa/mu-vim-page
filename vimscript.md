@@ -17,7 +17,7 @@ New features aren't invented here first. They show up on [Current]({{ '/lua/' | 
 - Anyone who prefers CoC + UltiSnips to Mason + nvim-cmp
 - Maintainers who like many small `.vim` files over one Lua tree
 
-Skip it if Neovim-only is fine and you want Telescope and local AI. That's [Current]({{ '/lua/' | relative_url }}).
+Skip it if Neovim-only is fine and you want Telescope. That's [Current]({{ '/lua/' | relative_url }}).
 
 ## What you get
 

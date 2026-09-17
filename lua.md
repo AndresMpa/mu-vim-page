@@ -1,18 +1,18 @@
 ---
 title: Current
-description: The Current MμVim. Neovim + Lua, Mason LSP, Telescope, and a local Ollama chat.
+description: The Current MμVim. Neovim + Lua, Mason LSP, and Telescope.
 permalink: /lua/
 ---
 
 <span class="badge lua">Current · Lua</span>
 
-[mu-vim](https://github.com/AndresMpa/mu-vim) is the config that still moves. It's Neovim-only, written in Lua, and it's where new work lands first: Mason, formatter and linter hooks, CodeCompanion. The other two aren't abandoned; they just don't get features that only make sense here, and this one is also the most complicated. That's the trade.
+[mu-vim](https://github.com/AndresMpa/mu-vim) is the config that still moves. It's Neovim-only, written in Lua, and it's where new work lands first: Mason, formatter and linter hooks, Telescope. The other two aren't abandoned; they just don't get features that only make sense here, and this one is also the most complicated. That's the trade.
 
 ## Who it's for
 
 - Neovim as a daily driver (web, editor maintenance, OS / dotfiles)
 - People who want native LSP rather than CoC
-- Anyone who wants **Telescope**, **nvim-tree**, and a **local** coding chat
+- Anyone who wants **Telescope** and **nvim-tree**
 - Users who are fine installing a C compiler, `fd`, and friends when `:checkhealth` asks
 
 Skip Current if you still need Vim, or if you want a file you can explain in an afternoon. That's [VimScript]({{ '/vimscript/' | relative_url }}) or [Mini]({{ '/mini/' | relative_url }}).
@@ -29,7 +29,7 @@ require('plugins')
 require("composition")
 ```
 
-`composition.lua` then loads LSP, greeter, theme, statusline, indentation, AI, nvim-tree, bufferline, Telescope, and autosave.
+`composition.lua` then loads LSP, greeter, theme, statusline, indentation, nvim-tree, bufferline, Telescope, and autosave.
 
 | Area | Implementation |
 | --- | --- |
@@ -40,24 +40,11 @@ require("composition")
 | Navigation | nvim-tree, Telescope, EasyMotion, tmux-navigator |
 | UI | material.nvim, lualine, bufferline, alpha-nvim, indent-blankline |
 | Git | fugitive + gitsigns |
-| AI | codecompanion.nvim → Ollama at `127.0.0.1:11434`, model `qwen2.5-coder:7b` |
 | Spelling | `dicts/english.dict`, `dicts/spanish.dict` |
 | Snippets | `snippets/` including Lua, Less, Stylus (on top of the shared web set) |
 | Font | Iosevka Nerd Font, copied by `install.lua` |
 
 Leader is still <kbd>Space</kbd>, and Pckr is <kbd>Space</kbd> <kbd>p</kbd> <kbd>i</kbd> / <kbd>c</kbd> / <kbd>u</kbd> for install, clean, and sync.
-
-### AI maps
-
-Ollama has to be running, and the adapter lives in `lua/setUp/aiSetting.lua`.
-
-| Action | Map |
-| --- | --- |
-| Toggle chat | <kbd>Space</kbd> <kbd>l</kbd> |
-| Chat with selection | Visual + <kbd>Space</kbd> <kbd>l</kbd> |
-| Inline | <kbd>Space</kbd> <kbd>l</kbd> <kbd>i</kbd> |
-| Actions | <kbd>Space</kbd> <kbd>l</kbd> <kbd>a</kbd> |
-| Add buffer to chat | <kbd>Space</kbd> <kbd>l</kbd> <kbd>b</kbd> |
 
 ## Install
 
@@ -101,7 +88,7 @@ nvim
 | A map | `lua/mapping/*.lua` |
 | Plugins | `lua/plugins.lua`, then `<Space> p i` |
 | LSP / format / lint | `lua/lsp/` |
-| Tree, greeter, Telescope, AI | `lua/setUp/` |
+| Tree, greeter, Telescope | `lua/setUp/` |
 | Theme | `lua/scheme/theme.lua` |
 
 Add a file and `require` it from `mapping/init.lua` or `composition.lua`. Don't grow `init.lua`.

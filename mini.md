@@ -17,7 +17,7 @@ It stays in sync with VimScript on features, so if something works there it shou
 - Anyone who wants to copy a working IDE and then delete half of it
 - People who are fine on **Vim or Neovim**
 
-If you already know you want modules, stay on [VimScript]({{ '/vimscript/' | relative_url }}). If you want Mason, Telescope, and Ollama, that's [Current]({{ '/lua/' | relative_url }}).
+If you already know you want modules, stay on [VimScript]({{ '/vimscript/' | relative_url }}). If you want Mason and Telescope, that's [Current]({{ '/lua/' | relative_url }}).
 
 ## What you get
 
@@ -32,7 +32,7 @@ The file is grouped into "slides", comment banners of `"` characters, so open `i
 
 Completion is **CoC** (`coc-prettier`, `coc-tsserver`, `coc-vetur`, HTML/CSS/JSON, shell, Rust, Solargraph, R), and snippets are **UltiSnips** for C++, CSS, HTML, JS/TS, Vue, Python, Markdown, shell, and a few others.
 
-There's no AI chat and no native LSP, and that's intentional.
+There's no native LSP, and that's intentional.
 
 ## Install
 

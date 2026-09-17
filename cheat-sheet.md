@@ -132,6 +132,5 @@ A buffer is an open file in the list, not necessarily visible.
 | Color picker | <kbd>Space</kbd> <kbd>r</kbd> |
 | Help map | <kbd>Space</kbd> <kbd>h</kbd> <kbd>h</kbd> |
 | Terminal split | <kbd>Ctrl</kbd> <kbd>t</kbd> |
-| AI chat | <kbd>Space</kbd> <kbd>l</kbd> |
 
 Mini/VimScript also bind <kbd>Ctrl</kbd> <kbd>t</kbd> to a `vsp term://zsh` helper taken from the original tutorial.

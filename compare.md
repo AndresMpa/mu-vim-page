@@ -36,7 +36,7 @@ All three keep leader on <kbd>Space</kbd>, git on the keyboard through vim-fugit
     <tr><th scope="row">Search</th><td>Telescope</td><td>fzf, ack, incsearch</td><td>fzf, ack, incsearch</td></tr>
     <tr><th scope="row">Statusline</th><td>lualine + bufferline</td><td>vim-airline</td><td>vim-airline</td></tr>
     <tr><th scope="row">Snippets</th><td>LuaSnip + <code>snippets/</code></td><td>UltiSnips</td><td>UltiSnips</td></tr>
-    <tr><th scope="row">AI</th><td>CodeCompanion + Ollama</td><td>No</td><td>No</td></tr>
+
     <tr><th scope="row">Installer</th><td><code>install.lua</code></td><td><code>install.sh</code></td><td><code>install.sh</code></td></tr>
     <tr><th scope="row">Extra languages</th><td>Web, Lua, Less, Stylus, spell dicts EN/ES</td><td>Same as Mini, plus Dockerfile/YAML snippets</td><td>Web, Python, Rust, R, bash</td></tr>
     <tr><th scope="row">How you extend it</th><td>Add a Lua file and <code>require</code> it</td><td>Add a sourced <code>.vim</code> module</td><td>Edit the one file</td></tr>
@@ -49,7 +49,7 @@ All three keep leader on <kbd>Space</kbd>, git on the keyboard through vim-fugit
 
 ### Current
 
-Pick Current when Neovim is the editor and you want the stack that still moves: Mason, nvim-cmp, formatter and linter hooks, Telescope, nvim-tree, and a chat window bound to a local Ollama model (`qwen2.5-coder:7b` by default). New work is added here first.
+Pick Current when Neovim is the editor and you want the stack that still moves: Mason, nvim-cmp, formatter and linter hooks, Telescope, and nvim-tree. New work is added here first.
 
 Skip it if you still need Vim, or if you want a config you can explain in an afternoon.
 
@@ -71,7 +71,7 @@ Skip it if you already know you want LSP, Telescope, or a modular layout.
 
 All three ship git (fugitive plus a signify or gitsigns flavour), comments, auto-pairs, surround, tmux navigator, EasyMotion, markdown preview, a live server (Bracey), CSS color, and a color picker.
 
-Current then swaps the IDE layer for native LSP: **Mason + lspconfig**, **nvim-cmp**, **LuaSnip**, **Treesitter**, **Telescope**, **nvim-tree**, **lualine**, **alpha-nvim**, **auto-save**, **Comment.nvim**, **gitsigns**, and **codecompanion.nvim**.
+Current then swaps the IDE layer for native LSP: **Mason + lspconfig**, **nvim-cmp**, **LuaSnip**, **Treesitter**, **Telescope**, **nvim-tree**, **lualine**, **alpha-nvim**, **auto-save**, **Comment.nvim**, and **gitsigns**.
 
 VimScript and Mini keep the older layer: **CoC**, **NERDTree**, **fzf**, **ack**, **airline**, **UltiSnips**, **Nvim-R**, polyglot, and WakaTime on Mini. That's the real fork. Current is native-LSP-era and the other two are still CoC-era.
 
@@ -79,7 +79,7 @@ VimScript and Mini keep the older layer: **CoC**, **NERDTree**, **fzf**, **ack**
 
 <section class="tab-panel" data-panel="layout" hidden markdown="1">
 
-**Current** is a Neovim runtime directory. `init.lua` loads settings, mappings, autocommands, plugins, then `composition.lua`. From there: `lua/lsp/` for servers, completion, diagnostics, formatter, and linter; `lua/mapping/` for basis, git, navigation, chat, and the package manager; `lua/setUp/` for greeter, tree, Telescope, theme, and AI; plus `snippets/`, `dicts/`, and `utilities/installation/` (the Lua installer and Iosevka Nerd Font).
+**Current** is a Neovim runtime directory. `init.lua` loads settings, mappings, autocommands, plugins, then `composition.lua`. From there: `lua/lsp/` for servers, completion, diagnostics, formatter, and linter; `lua/mapping/` for basis, git, navigation, and the package manager; `lua/setUp/` for greeter, tree, Telescope, and theme; plus `snippets/`, `dicts/`, and `utilities/installation/` (the Lua installer and Iosevka Nerd Font).
 
 **VimScript** is Mini split up. `init.vim` sources `$HOME/.config/nvim/.vim/{Basic,Plugin,Autocommands,Mapping,Update}.vim` plus `setUp/` and `util/`, and the snippets cover Dockerfile and YAML as well as the web set.
 
@@ -101,6 +101,5 @@ Once you pick a config you are not starting from zero on the others.
 | Git status | <kbd>Space</kbd> <kbd>g</kbd> <kbd>s</kbd> <kbd>t</kbd> | same |
 | Plugin install | <kbd>Space</kbd> <kbd>p</kbd> <kbd>i</kbd> (Pckr) | <kbd>Space</kbd> <kbd>p</kbd> <kbd>i</kbd> (Plug) |
 | Terminal split | <kbd>Ctrl</kbd> <kbd>t</kbd> | <kbd>Ctrl</kbd> <kbd>t</kbd> |
-| AI chat | <kbd>Space</kbd> <kbd>l</kbd> | — |
 
 The [cheat sheet]({{ '/cheat-sheet/' | relative_url }}) has native motions plus the Current maps in full.

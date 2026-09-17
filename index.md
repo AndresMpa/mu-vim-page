@@ -24,7 +24,7 @@ permalink: /
 
 <div class="home-copy">
   <p>MμVim started as one Neovim setup and split into three because a single file couldn't cover every machine. Leader is still Space, git still lives on the keyboard, and the editor still tries to feel like an IDE without leaving the terminal.</p>
-  <p><a href="{{ '/lua/' | relative_url }}">Current</a> is the Lua core and the one that still moves. Neovim only: Mason, Telescope, nvim-tree, and a chat talking to local Ollama, so new work lands here first.</p>
+  <p><a href="{{ '/lua/' | relative_url }}">Current</a> is the Lua core and the one that still moves. Neovim only: Mason, Telescope, and nvim-tree, so new work lands here first.</p>
   <p><a href="{{ '/vimscript/' | relative_url }}">VimScript</a> is the modular LTS. It runs in Vim and Neovim, keeps CoC and vim-plug, and it's the one to keep if you want a full IDE without switching to Lua.</p>
   <p><a href="{{ '/mini/' | relative_url }}">Mini</a> is one <code>init.vim</code> you can read top to bottom, copy as a template, or take to a server.</p>
   <p>If you'd rather build your own, the <a href="{{ '/tutorial/' | relative_url }}">tutorial</a> is still here, and <a href="{{ '/compare/' | relative_url }}">Compare</a> puts the three side by side.</p>

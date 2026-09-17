@@ -1,1 +1,23 @@
+title: Mμ Vim
+description: Three Neovim configs. Pick the one that matches how you actually work.
 theme: jekyll-theme-cayman
+url: https://andresmpa.github.io
+baseurl: /mu-vim-page
+lang: en-US
+show_downloads: false
+plugins:
+  - jekyll-seo-tag
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+repos:
+  lua: https://github.com/AndresMpa/mu-vim
+  mini: https://github.com/AndresMpa/mu-vim-mini
+  vimscript: https://github.com/AndresMpa/mu-vim-vimscript
+  page: https://github.com/AndresMpa/mu-vim-page

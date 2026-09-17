@@ -1,6 +1,6 @@
-# Mμ Vim documentation
+# MμVim documentation
 
-This repository is the GitHub Pages site for Mμ Vim: three public Neovim/Vim configs, how they differ, who each one is for, and the original "build your own `init.vim`" tutorial.
+This repository is the GitHub Pages site for MμVim: three public Neovim/Vim configs, how they differ, who each one is for, and the original "build your own `init.vim`" tutorial.
 
 Live URL once Pages is on: <https://andresmpa.github.io/mu-vim-page/>
 
@@ -10,7 +10,7 @@ That is the replacement for the old `andresmpa.github.io/mu-vim/` and `andresmpa
 
 | Path | What it is |
 | --- | --- |
-| `/` | Hub: logo tree with VimScript, Current, Mini |
+| `/` | Hub: logo tree with Current, VimScript, Mini |
 | `/compare/` | Matrix, audience, plugin stack, layouts |
 | `/mini/` | [mu-vim-mini](https://github.com/AndresMpa/mu-vim-mini) |
 | `/vimscript/` | [mu-vim-vimscript](https://github.com/AndresMpa/mu-vim-vimscript) |
@@ -36,5 +36,5 @@ Open <http://127.0.0.1:4000/mu-vim-page/>.
 ## Related repos
 
 - Current (Lua core): <https://github.com/AndresMpa/mu-vim>
-- VimScript LTS: <https://github.com/AndresMpa/mu-vim-vimscript>
+- VimScript: <https://github.com/AndresMpa/mu-vim-vimscript>
 - Mini: <https://github.com/AndresMpa/mu-vim-mini>

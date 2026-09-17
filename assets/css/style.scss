@@ -32,3 +32,10 @@
 .site-footer a {
   color: #009930;
 }
+
+.main-content {
+  max-width: min(88rem, 94vw);
+  padding: 2rem clamp(1.25rem, 4vw, 4.5rem);
+  font-size: clamp(1rem, 0.25vw + 0.95rem, 1.15rem);
+  line-height: 1.65;
+}

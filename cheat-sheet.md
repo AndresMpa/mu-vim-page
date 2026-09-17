@@ -1,10 +1,10 @@
 ---
 title: Cheat sheet
-description: Native Vim motions plus the Mμ Vim leader maps. Skip the first tables if you already know hjkl.
+description: Native Vim motions plus the MμVim leader maps. Skip the first tables if you already know hjkl.
 permalink: /cheat-sheet/
 ---
 
-Leader is <kbd>Space</kbd> in Mini, VimScript, and Lua. Native motions are the same everywhere. Plugin maps below call out where Lua diverges.
+Leader is <kbd>Space</kbd> in Current, VimScript, and Mini, and native motions are the same everywhere. Plugin maps below call out where Current diverges.
 
 If you already know Vim, skip to [Files](#files).
 
@@ -132,6 +132,5 @@ A buffer is an open file in the list, not necessarily visible.
 | Color picker | <kbd>Space</kbd> <kbd>r</kbd> |
 | Help map | <kbd>Space</kbd> <kbd>h</kbd> <kbd>h</kbd> |
 | Terminal split | <kbd>Ctrl</kbd> <kbd>t</kbd> |
-| AI chat | <kbd>Space</kbd> <kbd>l</kbd> |
 
 Mini/VimScript also bind <kbd>Ctrl</kbd> <kbd>t</kbd> to a `vsp term://zsh` helper taken from the original tutorial.

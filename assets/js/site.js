@@ -10,17 +10,17 @@
       mini: {
         title: "Mini",
         href: base + "/mini/",
-        why: "One init.vim you can read top to bottom. Good on a server, as a template, or when you do not want to maintain Lua modules."
+        why: "One init.vim you can read top to bottom. Good on a server, as a template, or when you don't want to maintain Lua modules."
       },
       vimscript: {
         title: "VimScript (LTS)",
         href: base + "/vimscript/",
-        why: "The modular VimScript config. Works in Vim and Neovim, uses CoC and vim-plug, and is the one to keep if you want a full IDE without switching to Lua."
+        why: "The modular LTS. It runs in Vim and Neovim, keeps CoC and vim-plug, and it's the one to keep if you want a full IDE without switching to Lua."
       },
       lua: {
         title: "Current",
         href: base + "/lua/",
-        why: "The current Neovim daily driver: Mason LSP, Telescope, nvim-tree, and a local Ollama chat. New work lands here first."
+        why: "The Lua core and the one that still moves. Neovim only: Mason, Telescope, and nvim-tree."
       }
     };
 

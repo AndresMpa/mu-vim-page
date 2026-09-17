@@ -1,25 +1,25 @@
 ---
 title: How to configure Neovim
-description: The original Mμ Vim GitHub Pages tutorial — motions, init.vim, plugins, and mappings, from scratch.
+description: The original MμVim GitHub Pages tutorial — motions, init.vim, plugins, and mappings, from scratch.
 permalink: /tutorial/
 ---
 
 <div class="callout">
 
-This is the walkthrough that used to live on github.io. It teaches you to **build** a config. If you want to install Mini, VimScript, or Lua instead, start on the [home page]({{ '/' | relative_url }}).
+This is the walkthrough that used to live on github.io. It teaches you to **build** a config, so if you want to install Current, VimScript, or Mini instead, start on the [home page]({{ '/' | relative_url }}).
 
 </div>
 
 ## Quick start
 
-The easy way is still to clone a finished config and run its installer. Lua:
+The easy way is still to clone a finished config and run its installer. Current:
 
 ```bash
 git clone https://github.com/AndresMpa/mu-vim.git ~/.config/nvim
 cd ~/.config/nvim && lua install.lua
 ```
 
-Mini and VimScript use `./install.sh` in their own repos. Follow the prompts, then open the editor.
+VimScript and Mini use `./install.sh` in their own repos. Follow the prompts, then open the editor.
 
 The rest of this page is the longer way: you make the file yourself.
 
@@ -233,7 +233,7 @@ Take a minute to read those if you want. That is the common way to set those plu
 
 ## Mapping
 
-Mapping is a combination of keys that runs something. Let's map the plugins. Leader in Mμ Vim is space, so these assume you set that (or you use the default and change `<Leader>`).
+Mapping is a combination of keys that runs something. Let's map the plugins. Leader in MμVim is space, so these assume you set that (or you use the default and change `<Leader>`).
 
 ```vim
 " coc
@@ -315,9 +315,9 @@ nnoremap <C-t> :call OpenTerminal()<CR>
 
 ## What to do after this page
 
-You just built the spine of **Mini**. When `init.vim` gets too long, split it the way **VimScript** does. When you want Neovim's Lua API, Mason, and Telescope, that is **Current**.
+You just built the spine of **Mini**. When `init.vim` gets too long, split it the way **VimScript** does, and when you want Neovim's Lua API, Mason, and Telescope, that's **Current**.
 
-- [Mini]({{ '/mini/' | relative_url }}) — the one-file version of this tutorial
-- [VimScript]({{ '/vimscript/' | relative_url }}) — the same ideas, modular
 - [Current]({{ '/lua/' | relative_url }}) — the Lua config that still moves
+- [VimScript]({{ '/vimscript/' | relative_url }}) — the same ideas, modular
+- [Mini]({{ '/mini/' | relative_url }}) — the one-file version of this tutorial
 - [Compare]({{ '/compare/' | relative_url }}) — the three side by side

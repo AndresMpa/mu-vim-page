@@ -1,10 +1,10 @@
 ---
 title: Cheat sheet
-description: Native Vim motions plus the Mμ Vim leader maps. Skip the first tables if you already know hjkl.
+description: Native Vim motions plus the MuVim leader maps. Skip the first tables if you already know hjkl.
 permalink: /cheat-sheet/
 ---
 
-Leader is <kbd>Space</kbd> in Mini, VimScript, and Lua. Native motions are the same everywhere. Plugin maps below call out where Lua diverges.
+Leader is <kbd>Space</kbd> in Current, VimScript, and Mini, and native motions are the same everywhere. Plugin maps below call out where Current diverges.
 
 If you already know Vim, skip to [Files](#files).
 

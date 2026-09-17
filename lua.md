@@ -1,14 +1,12 @@
 ---
 title: Current
-description: The current Mμ Vim. Neovim + Lua, Mason LSP, Telescope, and a local Ollama chat.
+description: The Current MuVim. Neovim + Lua, Mason LSP, Telescope, and a local Ollama chat.
 permalink: /lua/
 ---
 
 <span class="badge lua">Current · Lua</span>
 
-[mu-vim](https://github.com/AndresMpa/mu-vim) is the config that still moves. It is Neovim-only, written in Lua, and it is where new work lands first (Mason, formatter/linter, CodeCompanion). The other two configs are not abandoned; they just do not get features that only make sense here.
-
-It is also the most complicated one. That is the trade.
+[mu-vim](https://github.com/AndresMpa/mu-vim) is the config that still moves. It's Neovim-only, written in Lua, and it's where new work lands first: Mason, formatter and linter hooks, CodeCompanion. The other two aren't abandoned; they just don't get features that only make sense here, and this one is also the most complicated. That's the trade.
 
 ## Who it's for
 
@@ -17,7 +15,7 @@ It is also the most complicated one. That is the trade.
 - Anyone who wants **Telescope**, **nvim-tree**, and a **local** coding chat
 - Users who are fine installing a C compiler, `fd`, and friends when `:checkhealth` asks
 
-Skip Lua if you still need Vim, or if you want a file you can explain in an afternoon. Use [Mini]({{ '/mini/' | relative_url }}) or [VimScript]({{ '/vimscript/' | relative_url }}).
+Skip Current if you still need Vim, or if you want a file you can explain in an afternoon. That's [VimScript]({{ '/vimscript/' | relative_url }}) or [Mini]({{ '/mini/' | relative_url }}).
 
 ## What you get
 
@@ -47,11 +45,11 @@ require("composition")
 | Snippets | `snippets/` including Lua, Less, Stylus (on top of the shared web set) |
 | Font | Iosevka Nerd Font, copied by `install.lua` |
 
-Leader is still <kbd>Space</kbd>. Plugin maps are <kbd>Space</kbd> <kbd>p</kbd> <kbd>i</kbd> / <kbd>c</kbd> / <kbd>u</kbd> for Pckr install, clean, sync.
+Leader is still <kbd>Space</kbd>, and Pckr is <kbd>Space</kbd> <kbd>p</kbd> <kbd>i</kbd> / <kbd>c</kbd> / <kbd>u</kbd> for install, clean, and sync.
 
 ### AI maps
 
-Ollama has to be running. The adapter is configured in `lua/setUp/aiSetting.lua`.
+Ollama has to be running, and the adapter lives in `lua/setUp/aiSetting.lua`.
 
 | Action | Map |
 | --- | --- |
@@ -63,7 +61,7 @@ Ollama has to be running. The adapter is configured in `lua/setUp/aiSetting.lua`
 
 ## Install
 
-Neovim and Lua (the installer is `lua5.4` / `lua` / `luajit`). Vim will not load this config.
+You need Neovim and Lua (`lua5.4`, `lua`, or `luajit`). Vim will not load this config.
 
 Linux / macOS:
 
@@ -91,9 +89,9 @@ move mu-vim nvim
 nvim
 ```
 
-`:checkhealth` is the real next step. Missing `fd`, a C compiler, or treesitter parsers show up there. The older troubleshooting notes live in the [mu-vim wiki](https://github.com/AndresMpa/mu-vim/wiki/General-dependencies).
+`:checkhealth` is the real next step, because missing `fd`, a C compiler, or treesitter parsers show up there. Older troubleshooting notes live in the [mu-vim wiki](https://github.com/AndresMpa/mu-vim/wiki/General-dependencies).
 
-`install.lua` copies the Nerd Font, can backup a previous config to `~/.config/previous-mu-vim`, and writes a marker under `$XDG_DATA_HOME/nvim/mu-vim-installed`. There is also a `compose.yml` if you want the config inside a container.
+`install.lua` copies the Nerd Font, can back up a previous config to `~/.config/previous-mu-vim`, and writes a marker under `$XDG_DATA_HOME/nvim/mu-vim-installed`. There's also a `compose.yml` if you want the config inside a container.
 
 ## How to extend it
 
@@ -106,4 +104,4 @@ nvim
 | Tree, greeter, Telescope, AI | `lua/setUp/` |
 | Theme | `lua/scheme/theme.lua` |
 
-Add a file, `require` it from `mapping/init.lua` or `composition.lua`. Do not grow `init.lua`.
+Add a file and `require` it from `mapping/init.lua` or `composition.lua`. Don't grow `init.lua`.

@@ -1,14 +1,14 @@
 ---
 title: VimScript (LTS)
-description: Modular VimScript for Vim and Neovim. CoC, vim-plug, and the long-lived Mμ Vim IDE.
+description: Modular VimScript for Vim and Neovim. CoC, vim-plug, and the long-lived MuVim IDE.
 permalink: /vimscript/
 ---
 
 <span class="badge vimscript">VimScript · LTS</span>
 
-[mu-vim-vimscript](https://github.com/AndresMpa/mu-vim-vimscript) is Mini after it was split into sourced files. Same language, same plugin manager, same CoC layer, but each concern has a file. It has been the daily config for web work, some Python, bash, and dotfiles, and it still runs in **Vim and Neovim**.
+[mu-vim-vimscript](https://github.com/AndresMpa/mu-vim-vimscript) is Mini after it was split into sourced files. Same language, same plugin manager, same CoC layer, but each concern has a file. It's been the daily config for web work, some Python, bash, and dotfiles, and it still runs in **Vim and Neovim**.
 
-New features are not invented here first. They show up on [Current]({{ '/lua/' | relative_url }}) and only come back if they still make sense in VimScript.
+New features aren't invented here first. They show up on [Current]({{ '/lua/' | relative_url }}) and only come back if they still make sense in VimScript.
 
 ## Who it's for
 
@@ -17,11 +17,11 @@ New features are not invented here first. They show up on [Current]({{ '/lua/' |
 - Anyone who prefers CoC + UltiSnips to Mason + nvim-cmp
 - Maintainers who like many small `.vim` files over one Lua tree
 
-Skip it if Neovim-only is fine and you want Telescope and local AI. That is Lua.
+Skip it if Neovim-only is fine and you want Telescope and local AI. That's [Current]({{ '/lua/' | relative_url }}).
 
 ## What you get
 
-`init.vim` does not hold settings. It sets `$vimcf` to `~/.config/nvim/.vim` and sources:
+`init.vim` doesn't hold settings. It sets `$vimcf` to `~/.config/nvim/.vim` and sources:
 
 | File | Role |
 | --- | --- |
@@ -35,7 +35,7 @@ Skip it if Neovim-only is fine and you want Telescope and local AI. That is Lua.
 | `Mapping.vim` + `util/Extention.vim` | Leader maps, terminal helper |
 | `Update.vim` | Auto-update hook |
 
-`coc-settings.json` formats CSS and Markdown on save and registers a Dockerfile language server. UltiSnips here also include **Dockerfile** and **YAML**, which Mini does not.
+`coc-settings.json` formats CSS and Markdown on save and registers a Dockerfile language server. UltiSnips here also include **Dockerfile** and **YAML**, which Mini doesn't.
 
 ### Plugin groups
 
@@ -67,12 +67,12 @@ Then in the editor:
 :call mkdp#util#install()
 ```
 
-`<Space> h h` opens the in-editor help map. The [cheat sheet]({{ '/cheat-sheet/' | relative_url }}) in this repo matches Mini/VimScript maps more closely than the Lua ones.
+`<Space> h h` opens the in-editor help map. The [cheat sheet]({{ '/cheat-sheet/' | relative_url }}) matches Mini and VimScript maps more closely than Current.
 
 Windows: clone to `%LOCALAPPDATA%\nvim`.
 
 ## How to extend it
 
-Add a plugin in `Plugin.vim`, put `let g:` / `nmap` noise in the matching `setUp/` file, source it from `init.vim` if you created a new file. That is the whole module convention.
+Add a plugin in `Plugin.vim`, put `let g:` / `nmap` noise in the matching `setUp/` file, and source it from `init.vim` if you created a new file. That's the whole module convention.
 
 If you find yourself rewriting this in Lua, you want [Current]({{ '/lua/' | relative_url }}).

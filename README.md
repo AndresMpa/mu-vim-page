@@ -12,6 +12,7 @@ That is the replacement for the old `andresmpa.github.io/mu-vim/` and `andresmpa
 | --- | --- |
 | `/` | Hub: logo tree with Current, VimScript, Mini |
 | `/compare/` | Matrix, audience, plugin stack, layouts |
+| `/only-in-current/` | What Current has that Mini and VimScript do not |
 | `/mini/` | [mu-vim-mini](https://github.com/AndresMpa/mu-vim-mini) |
 | `/vimscript/` | [mu-vim-vimscript](https://github.com/AndresMpa/mu-vim-vimscript) |
 | `/lua/` | Current — [mu-vim](https://github.com/AndresMpa/mu-vim) |

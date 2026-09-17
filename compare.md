@@ -103,4 +103,4 @@ Once you pick a config you are not starting from zero on the others.
 | Terminal split | <kbd>Ctrl</kbd> <kbd>t</kbd> | <kbd>Ctrl</kbd> <kbd>t</kbd> |
 | AI chat | <kbd>Space</kbd> <kbd>l</kbd> | — |
 
-The [cheat sheet]({{ '/cheat-sheet/' | relative_url }}) has native motions plus the Current maps in full.
+The [cheat sheet]({{ '/cheat-sheet/' | relative_url }}) has native motions plus the Current maps in full. For the gap the other way, [Only in Current]({{ '/only-in-current/' | relative_url }}) lists what Mini and VimScript do not ship.

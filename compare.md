@@ -15,31 +15,37 @@ The three configs share a leader key (<kbd>Space</kbd>), git mappings through vi
 </div>
 
 <section class="tab-panel" data-panel="matrix">
-
 <div class="matrix-wrap">
-
-| | [Mini]({{ '/mini/' | relative_url }}) | [VimScript]({{ '/vimscript/' | relative_url }}) | [Current]({{ '/lua/' | relative_url }}) |
-| --- | --- | --- | --- |
-| Repo | [mu-vim-mini](https://github.com/AndresMpa/mu-vim-mini) | [mu-vim-vimscript](https://github.com/AndresMpa/mu-vim-vimscript) | [mu-vim](https://github.com/AndresMpa/mu-vim) |
-| Role | Template / server | LTS daily driver | Core, newest features |
-| Language | One `init.vim` | VimScript modules | Lua modules |
-| Runs on | Vim and Neovim | Vim and Neovim | Neovim only |
-| Plugin manager | vim-plug | vim-plug | pckr.nvim |
-| Completion | CoC | CoC | nvim-cmp + Mason LSP |
-| File tree | NERDTree | NERDTree | nvim-tree |
-| Search | fzf, ack, incsearch | fzf, ack, incsearch | Telescope |
-| Statusline | vim-airline | vim-airline | lualine + bufferline |
-| Snippets | UltiSnips | UltiSnips | LuaSnip + `snippets/` |
-| AI | No | No | CodeCompanion + Ollama |
-| Installer | `install.sh` | `install.sh` | `install.lua` |
-| Extra languages | Web, Python, Rust, R, bash | Same, plus Dockerfile/YAML snippets | Web, Lua, Less, Stylus, spell dicts EN/ES |
-| How you extend it | Edit the one file | Add a sourced `.vim` module | Add a Lua file and `require` it |
-
+<table class="matrix">
+  <thead>
+    <tr>
+      <th></th>
+      <th><a href="{{ '/mini/' | relative_url }}">Mini</a></th>
+      <th><a href="{{ '/vimscript/' | relative_url }}">VimScript</a></th>
+      <th><a href="{{ '/lua/' | relative_url }}">Current</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><th scope="row">Repo</th><td><a href="https://github.com/AndresMpa/mu-vim-mini">mu-vim-mini</a></td><td><a href="https://github.com/AndresMpa/mu-vim-vimscript">mu-vim-vimscript</a></td><td><a href="https://github.com/AndresMpa/mu-vim">mu-vim</a></td></tr>
+    <tr><th scope="row">Role</th><td>Template / server</td><td>LTS daily driver</td><td>Core, newest features</td></tr>
+    <tr><th scope="row">Language</th><td>One <code>init.vim</code></td><td>VimScript modules</td><td>Lua modules</td></tr>
+    <tr><th scope="row">Runs on</th><td>Vim and Neovim</td><td>Vim and Neovim</td><td>Neovim only</td></tr>
+    <tr><th scope="row">Plugin manager</th><td>vim-plug</td><td>vim-plug</td><td>pckr.nvim</td></tr>
+    <tr><th scope="row">Completion</th><td>CoC</td><td>CoC</td><td>nvim-cmp + Mason LSP</td></tr>
+    <tr><th scope="row">File tree</th><td>NERDTree</td><td>NERDTree</td><td>nvim-tree</td></tr>
+    <tr><th scope="row">Search</th><td>fzf, ack, incsearch</td><td>fzf, ack, incsearch</td><td>Telescope</td></tr>
+    <tr><th scope="row">Statusline</th><td>vim-airline</td><td>vim-airline</td><td>lualine + bufferline</td></tr>
+    <tr><th scope="row">Snippets</th><td>UltiSnips</td><td>UltiSnips</td><td>LuaSnip + <code>snippets/</code></td></tr>
+    <tr><th scope="row">AI</th><td>No</td><td>No</td><td>CodeCompanion + Ollama</td></tr>
+    <tr><th scope="row">Installer</th><td><code>install.sh</code></td><td><code>install.sh</code></td><td><code>install.lua</code></td></tr>
+    <tr><th scope="row">Extra languages</th><td>Web, Python, Rust, R, bash</td><td>Same, plus Dockerfile/YAML snippets</td><td>Web, Lua, Less, Stylus, spell dicts EN/ES</td></tr>
+    <tr><th scope="row">How you extend it</th><td>Edit the one file</td><td>Add a sourced <code>.vim</code> module</td><td>Add a Lua file and <code>require</code> it</td></tr>
+  </tbody>
+</table>
 </div>
-
 </section>
 
-<section class="tab-panel" data-panel="audience" hidden>
+<section class="tab-panel" data-panel="audience" hidden markdown="1">
 
 ### Mini
 
@@ -61,7 +67,7 @@ Skip Current if you need Vim compatibility, or if you want a config you can expl
 
 </section>
 
-<section class="tab-panel" data-panel="stack" hidden>
+<section class="tab-panel" data-panel="stack" hidden markdown="1">
 
 All three ship git (fugitive + a signify/gitsigns flavour), comments, auto-pairs, surround, tmux navigator, EasyMotion, markdown preview, a live server (Bracey), CSS color, and a color picker.
 
@@ -73,7 +79,7 @@ That is the real fork. The VimScript configs are CoC-era. Current is native-LSP-
 
 </section>
 
-<section class="tab-panel" data-panel="layout" hidden>
+<section class="tab-panel" data-panel="layout" hidden markdown="1">
 
 **Mini** is flat: `init.vim`, `install.sh`, `coc-settings.json`, `UltiSnips/`.
 

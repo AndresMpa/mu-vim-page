@@ -8,7 +8,7 @@ permalink: /vimscript/
 
 [mu-vim-vimscript](https://github.com/AndresMpa/mu-vim-vimscript) is Mini after it was split into sourced files. Same language, same plugin manager, same CoC layer, but each concern has a file. It has been the daily config for web work, some Python, bash, and dotfiles, and it still runs in **Vim and Neovim**.
 
-New features are not invented here first. They show up on [Lua]({{ '/lua/' | relative_url }}) and only come back if they still make sense in VimScript.
+New features are not invented here first. They show up on [Current]({{ '/lua/' | relative_url }}) and only come back if they still make sense in VimScript.
 
 ## Who it's for
 
@@ -75,4 +75,4 @@ Windows: clone to `%LOCALAPPDATA%\nvim`.
 
 Add a plugin in `Plugin.vim`, put `let g:` / `nmap` noise in the matching `setUp/` file, source it from `init.vim` if you created a new file. That is the whole module convention.
 
-If you find yourself rewriting this in Lua, you want [the core config]({{ '/lua/' | relative_url }}).
+If you find yourself rewriting this in Lua, you want [Current]({{ '/lua/' | relative_url }}).

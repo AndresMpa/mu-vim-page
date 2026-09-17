@@ -18,7 +18,7 @@ The three configs share a leader key (<kbd>Space</kbd>), git mappings through vi
 
 <div class="matrix-wrap">
 
-| | [Mini]({{ '/mini/' | relative_url }}) | [VimScript]({{ '/vimscript/' | relative_url }}) | [Lua]({{ '/lua/' | relative_url }}) |
+| | [Mini]({{ '/mini/' | relative_url }}) | [VimScript]({{ '/vimscript/' | relative_url }}) | [Current]({{ '/lua/' | relative_url }}) |
 | --- | --- | --- | --- |
 | Repo | [mu-vim-mini](https://github.com/AndresMpa/mu-vim-mini) | [mu-vim-vimscript](https://github.com/AndresMpa/mu-vim-vimscript) | [mu-vim](https://github.com/AndresMpa/mu-vim) |
 | Role | Template / server | LTS daily driver | Core, newest features |
@@ -53,11 +53,11 @@ Pick VimScript if you still open Vim, not only Neovim, and you want CoC, UltiSni
 
 Skip VimScript if you have already moved off CoC and you are fine requiring Neovim.
 
-### Lua
+### Current
 
-Pick Lua if Neovim is the editor and you want the current stack: Mason, nvim-cmp, formatter/linter/DAP hooks, Telescope, nvim-tree, and a chat window bound to a local Ollama model (`qwen2.5-coder:7b` by default). New work is added here first.
+Pick Current if Neovim is the editor and you want the current stack: Mason, nvim-cmp, formatter/linter/DAP hooks, Telescope, nvim-tree, and a chat window bound to a local Ollama model (`qwen2.5-coder:7b` by default). New work is added here first.
 
-Skip Lua if you need Vim compatibility, or if you want a config you can explain to someone in an afternoon.
+Skip Current if you need Vim compatibility, or if you want a config you can explain to someone in an afternoon.
 
 </section>
 
@@ -67,9 +67,9 @@ All three ship git (fugitive + a signify/gitsigns flavour), comments, auto-pairs
 
 Mini and VimScript then add the older IDE layer: **CoC**, **NERDTree**, **fzf**, **ack**, **airline**, **UltiSnips**, **Nvim-R**, polyglot, and WakaTime (Mini).
 
-Lua replaces that layer: **Mason + lspconfig**, **nvim-cmp**, **LuaSnip**, **Treesitter**, **Telescope**, **nvim-tree**, **lualine**, **alpha-nvim** greeter, **auto-save**, **Comment.nvim**, **gitsigns**, and **codecompanion.nvim**.
+Current replaces that layer: **Mason + lspconfig**, **nvim-cmp**, **LuaSnip**, **Treesitter**, **Telescope**, **nvim-tree**, **lualine**, **alpha-nvim** greeter, **auto-save**, **Comment.nvim**, **gitsigns**, and **codecompanion.nvim**.
 
-That is the real fork. The VimScript configs are CoC-era. Lua is native-LSP-era.
+That is the real fork. The VimScript configs are CoC-era. Current is native-LSP-era.
 
 </section>
 
@@ -79,7 +79,7 @@ That is the real fork. The VimScript configs are CoC-era. Lua is native-LSP-era.
 
 **VimScript** is Mini split up. `init.vim` sources `$HOME/.config/nvim/.vim/{Basic,Plugin,Autocommands,Mapping,Update}.vim` plus `setUp/` and `util/`. Snippets cover Dockerfile and YAML as well as the web set.
 
-**Lua** is a Neovim runtime directory:
+**Current** is a Neovim runtime directory:
 
 - `init.lua` loads settings, mappings, autocommands, plugins, then `composition.lua`
 - `lua/lsp/` is servers, completion, diagnostics, formatter, linter
@@ -94,7 +94,7 @@ That is the real fork. The VimScript configs are CoC-era. Lua is native-LSP-era.
 
 Once you pick a config you are not starting from zero on the others.
 
-| Action | Mini / VimScript | Lua |
+| Action | Mini / VimScript | Current |
 | --- | --- | --- |
 | Leader | <kbd>Space</kbd> | <kbd>Space</kbd> |
 | Save / quit | <kbd>Space</kbd> <kbd>w</kbd> / <kbd>q</kbd> | same |
@@ -105,4 +105,4 @@ Once you pick a config you are not starting from zero on the others.
 | Terminal split | <kbd>Ctrl</kbd> <kbd>t</kbd> | <kbd>Ctrl</kbd> <kbd>t</kbd> |
 | AI chat | — | <kbd>Space</kbd> <kbd>l</kbd> |
 
-The [cheat sheet]({{ '/cheat-sheet/' | relative_url }}) has native motions plus the Lua maps in full.
+The [cheat sheet]({{ '/cheat-sheet/' | relative_url }}) has native motions plus the Current maps in full.

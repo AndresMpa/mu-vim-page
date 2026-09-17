@@ -17,7 +17,7 @@ It stays in sync with the VimScript config on features. If something works there
 - Anyone who wants to copy a working IDE and then delete half of it
 - People who are fine on **Vim or Neovim**
 
-If you already know you want modules, stay on [VimScript]({{ '/vimscript/' | relative_url }}). If you want Mason, Telescope, and Ollama, that is [Lua]({{ '/lua/' | relative_url }}).
+If you already know you want modules, stay on [VimScript]({{ '/vimscript/' | relative_url }}). If you want Mason, Telescope, and Ollama, that is [Current]({{ '/lua/' | relative_url }}).
 
 ## What you get
 

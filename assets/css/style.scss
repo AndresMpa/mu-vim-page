@@ -1,3 +1,34 @@
 ---
 ---
 @import "{{ site.theme }}";
+
+.page-header {
+  color: #fff;
+  background-color: #000;
+  background-image: none;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+  color: #413a96;
+}
+
+.main-content h1 {
+  color: #009930;
+}
+
+.main-content a {
+  color: #413a96;
+}
+
+.main-content a:hover {
+  color: #009930;
+}
+
+.site-footer a {
+  color: #009930;
+}

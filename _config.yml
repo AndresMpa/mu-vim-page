@@ -1,5 +1,5 @@
 title: Mμ Vim
-description: Three Neovim configs. Pick the one that matches how you actually work.
+description: Three Neovim configs. VimScript, Current, and Mini.
 theme: jekyll-theme-cayman
 url: https://andresmpa.github.io
 baseurl: /mu-vim-page

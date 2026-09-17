@@ -1,10 +1,10 @@
 ---
-title: Lua (core)
+title: Current
 description: The current Mμ Vim. Neovim + Lua, Mason LSP, Telescope, and a local Ollama chat.
 permalink: /lua/
 ---
 
-<span class="badge lua">Lua · core</span>
+<span class="badge lua">Current · Lua</span>
 
 [mu-vim](https://github.com/AndresMpa/mu-vim) is the config that still moves. It is Neovim-only, written in Lua, and it is where new work lands first (Mason, formatter/linter, CodeCompanion). The other two configs are not abandoned; they just do not get features that only make sense here.
 

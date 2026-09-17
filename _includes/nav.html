@@ -1,0 +1,9 @@
+<nav class="site-nav" aria-label="Mμ Vim">
+  <a href="{{ '/' | relative_url }}" {% if page.permalink == '/' %}aria-current="page"{% endif %}>Home</a>
+  <a href="{{ '/compare/' | relative_url }}" {% if page.permalink == '/compare/' %}aria-current="page"{% endif %}>Compare</a>
+  <a href="{{ '/mini/' | relative_url }}" {% if page.permalink == '/mini/' %}aria-current="page"{% endif %}>Mini</a>
+  <a href="{{ '/vimscript/' | relative_url }}" {% if page.permalink == '/vimscript/' %}aria-current="page"{% endif %}>VimScript</a>
+  <a href="{{ '/lua/' | relative_url }}" {% if page.permalink == '/lua/' %}aria-current="page"{% endif %}>Lua</a>
+  <a href="{{ '/tutorial/' | relative_url }}" {% if page.permalink == '/tutorial/' %}aria-current="page"{% endif %}>Tutorial</a>
+  <a href="{{ '/cheat-sheet/' | relative_url }}" {% if page.permalink == '/cheat-sheet/' %}aria-current="page"{% endif %}>Cheat sheet</a>
+</nav>

@@ -95,7 +95,7 @@ A buffer is an open file in the list, not necessarily visible.
 
 ## Plugin manager
 
-| Action | Mini / VimScript (Plug) | Lua (Pckr) |
+| Action | Mini / VimScript (Plug) | Current (Pckr) |
 | --- | --- | --- |
 | Install | <kbd>Space</kbd> <kbd>p</kbd> <kbd>i</kbd> | same |
 | Clean | <kbd>Space</kbd> <kbd>p</kbd> <kbd>c</kbd> | same |
@@ -103,7 +103,7 @@ A buffer is an open file in the list, not necessarily visible.
 
 ## Navigation
 
-| Action | Mini / VimScript | Lua |
+| Action | Mini / VimScript | Current |
 | --- | --- | --- |
 | File tree | <kbd>Space</kbd> <kbd>n</kbd> NERDTree | <kbd>Space</kbd> <kbd>n</kbd> nvim-tree |
 | EasyMotion | <kbd>Space</kbd> <kbd>s</kbd> <kbd>s</kbd> | same |
@@ -123,7 +123,7 @@ A buffer is an open file in the list, not necessarily visible.
 | Pull / push | <kbd>Space</kbd> <kbd>g</kbd> <kbd>p</kbd> <kbd>l</kbd> / <kbd>p</kbd> <kbd>s</kbd> |
 | Checkout / new branch | <kbd>g</kbd> <kbd>c</kbd> <kbd>o</kbd> / <kbd>g</kbd> <kbd>c</kbd> <kbd>b</kbd> (Lua) |
 
-## Lua extras
+## Current extras
 
 | Action | Command |
 | --- | --- |

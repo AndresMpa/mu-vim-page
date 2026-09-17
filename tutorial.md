@@ -315,9 +315,9 @@ nnoremap <C-t> :call OpenTerminal()<CR>
 
 ## What to do after this page
 
-You just built the spine of **Mini**. When `init.vim` gets too long, split it the way **VimScript** does. When you want Neovim's Lua API, Mason, and Telescope, that is **Lua**.
+You just built the spine of **Mini**. When `init.vim` gets too long, split it the way **VimScript** does. When you want Neovim's Lua API, Mason, and Telescope, that is **Current**.
 
 - [Mini]({{ '/mini/' | relative_url }}) — the one-file version of this tutorial
 - [VimScript]({{ '/vimscript/' | relative_url }}) — the same ideas, modular
-- [Lua]({{ '/lua/' | relative_url }}) — the current config
+- [Current]({{ '/lua/' | relative_url }}) — the Lua config that still moves
 - [Compare]({{ '/compare/' | relative_url }}) — the three side by side

@@ -18,7 +18,7 @@
         why: "The modular VimScript config. Works in Vim and Neovim, uses CoC and vim-plug, and is the one to keep if you want a full IDE without switching to Lua."
       },
       lua: {
-        title: "Lua (core)",
+        title: "Current",
         href: base + "/lua/",
         why: "The current Neovim daily driver: Mason LSP, Telescope, nvim-tree, and a local Ollama chat. New work lands here first."
       }

@@ -10,11 +10,11 @@ That is the replacement for the old `andresmpa.github.io/mu-vim/` and `andresmpa
 
 | Path | What it is |
 | --- | --- |
-| `/` | Hub, config picker, three cards |
+| `/` | Hub: logo tree with VimScript, Current, Mini |
 | `/compare/` | Matrix, audience, plugin stack, layouts |
 | `/mini/` | [mu-vim-mini](https://github.com/AndresMpa/mu-vim-mini) |
 | `/vimscript/` | [mu-vim-vimscript](https://github.com/AndresMpa/mu-vim-vimscript) |
-| `/lua/` | [mu-vim](https://github.com/AndresMpa/mu-vim) |
+| `/lua/` | Current — [mu-vim](https://github.com/AndresMpa/mu-vim) |
 | `/tutorial/` | Original github.io walkthrough |
 | `/cheat-sheet/` | Motions + leader maps |
 
@@ -35,6 +35,6 @@ Open <http://127.0.0.1:4000/mu-vim-page/>.
 
 ## Related repos
 
-- Lua / core: <https://github.com/AndresMpa/mu-vim>
+- Current (Lua core): <https://github.com/AndresMpa/mu-vim>
 - VimScript LTS: <https://github.com/AndresMpa/mu-vim-vimscript>
 - Mini: <https://github.com/AndresMpa/mu-vim-mini>

@@ -77,7 +77,7 @@ Vim treats words as objects. Once that clicks, counts and motions get fast.
 | Action | Command |
 | --- | --- |
 | Save | <kbd>Space</kbd> <kbd>w</kbd> |
-| Quit | <kbd>Space</kbd> <kbd>q</kbd> |
+| Quit / close window or terminal | <kbd>Space</kbd> <kbd>q</kbd> |
 | Split / vertical split | <kbd>Space</kbd> <kbd>v</kbd> <kbd>j</kbd> / <kbd>k</kbd> |
 | Only this window | <kbd>Space</kbd> <kbd>v</kbd> <kbd>v</kbd> (Lua) |
 | Resize | <kbd>Space</kbd> `<` / `>` |
@@ -105,12 +105,13 @@ A buffer is an open file in the list, not necessarily visible.
 
 | Action | Mini / VimScript | Current |
 | --- | --- | --- |
-| File tree | <kbd>Space</kbd> <kbd>n</kbd> NERDTree | <kbd>Space</kbd> <kbd>n</kbd> nvim-tree |
+| File tree (right) | <kbd>Space</kbd> <kbd>n</kbd> NERDTree | <kbd>Space</kbd> <kbd>n</kbd> nvim-tree |
 | EasyMotion | <kbd>Space</kbd> <kbd>s</kbd> <kbd>s</kbd> | same |
 | Search in file | `/` `?` (incsearch) | `/` plus Telescope |
-| Find files | <kbd>Space</kbd> <kbd>f</kbd> <kbd>f</kbd> (fzf) | <kbd>Space</kbd> <kbd>t</kbd> <kbd>f</kbd> |
+| Find files | <kbd>Space</kbd> <kbd>f</kbd> <kbd>f</kbd> (fzf modal) | <kbd>Space</kbd> <kbd>t</kbd> <kbd>f</kbd> |
 | Live grep | ack / fzf | <kbd>Space</kbd> <kbd>t</kbd> <kbd>t</kbd> |
 | Telescope hub | — | <kbd>Space</kbd> <kbd>t</kbd> |
+| Theme picker | <kbd>Space</kbd> <kbd>t</kbd> <kbd>h</kbd> | same |
 
 ## Git (all three)
 
@@ -131,6 +132,7 @@ A buffer is an open file in the list, not necessarily visible.
 | Toggle autosave | <kbd>Space</kbd> <kbd>a</kbd> <kbd>w</kbd> |
 | Color picker | <kbd>Space</kbd> <kbd>r</kbd> |
 | Help map | <kbd>Space</kbd> <kbd>h</kbd> <kbd>h</kbd> |
-| Terminal split | <kbd>Ctrl</kbd> <kbd>t</kbd> |
+| New terminal (left) | <kbd>Ctrl</kbd> <kbd>t</kbd> |
+| Close terminal | <kbd>Space</kbd> <kbd>q</kbd> |
 
-Mini/VimScript also bind <kbd>Ctrl</kbd> <kbd>t</kbd> to a `vsp term://zsh` helper taken from the original tutorial.
+Mini/VimScript also bind <kbd>Ctrl</kbd> <kbd>t</kbd> to a left `term://zsh` split. Theme picker and <kbd>Space</kbd> <kbd>q</kbd> are on all three.

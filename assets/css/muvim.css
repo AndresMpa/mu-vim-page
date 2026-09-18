@@ -20,11 +20,19 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: clamp(15px, 0.35vw + 14px, 18px);
+}
+
+html,
+body,
+.page-header,
+.main-content {
+  background-color: #0f111a !important;
+  color: var(--mu-fg);
 }
 
 body {
-  background: var(--mu-bg);
+  background: #0f111a;
   color: var(--mu-fg);
 }
 
@@ -51,12 +59,7 @@ body {
 }
 
 .site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.4rem 0.55rem;
-  margin: 1.6rem auto 0;
-  max-width: 52rem;
+  display: none;
 }
 
 .site-nav a {
@@ -338,18 +341,23 @@ body.is-home .site-footer {
   width: fit-content;
   max-width: 100%;
   margin-inline: auto;
-  border: 2px solid var(--mu-purple);
-  padding: 0.85rem 1.6rem;
+  padding: 0;
   text-align: center;
-  background: var(--mu-bg);
+  background: #0f111a;
 }
 
-.mu-tree-root img {
-  display: block;
-  margin: 0 auto;
-  max-width: 22rem;
-  width: auto;
-  height: auto;
+.mu-ascii,
+.main-content pre.mu-ascii {
+  background: transparent;
+  color: var(--mu-purple);
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
+  font-size: clamp(0.42rem, 1.55vw, 0.95rem);
+  line-height: 1.08;
+  white-space: pre;
+  overflow-x: auto;
 }
 
 .mu-tree-stem {
@@ -416,7 +424,7 @@ body.is-home .site-footer {
 }
 
 .home-copy {
-  font-size: 1.12rem;
+  font-size: clamp(1.05rem, 0.45vw + 0.95rem, 1.4rem);
   line-height: 1.65;
   color: var(--mu-fg);
   max-width: 42rem;

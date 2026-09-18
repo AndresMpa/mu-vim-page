@@ -2,8 +2,8 @@
 :root {
   --mu-bg: #0f111a;
   --mu-bg-alt: #181a1f;
-  --mu-fg: #8f93a2;
-  --mu-dim: #464b5d;
+  --mu-fg: #c5c9d6;
+  --mu-dim: #8f93a2;
   --mu-red: #f07178;
   --mu-orange: #f78c6c;
   --mu-yellow: #ffcb6b;
@@ -15,12 +15,12 @@
   --mu-black: #0f111a;
   --mu-purple-hover: #d4a8f0;
   --mu-green-hover: #d4f5a8;
-  --mu-ink: #8f93a2;
-  --mu-muted: #464b5d;
+  --mu-ink: #c5c9d6;
+  --mu-muted: #8f93a2;
 }
 
 html {
-  font-size: clamp(15px, 0.35vw + 14px, 18px);
+  font-size: 100%;
 }
 
 html,
@@ -29,6 +29,27 @@ body,
 .main-content {
   background-color: #0f111a !important;
   color: var(--mu-fg);
+}
+
+#skip-to-content {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--mu-bg-alt);
+  color: var(--mu-accent);
+  padding: 0.5rem 0.75rem;
+  z-index: 100;
+}
+
+#skip-to-content:focus {
+  left: 0.75rem;
+  top: 0.75rem;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--mu-accent);
+  outline-offset: 2px;
 }
 
 body {
@@ -54,7 +75,21 @@ body {
 }
 
 .page-header {
-  padding-bottom: 2.5rem;
+  padding: 1.25rem 1rem 1.5rem;
+}
+
+.project-name {
+  font-size: 1.75rem !important;
+  margin: 0.2rem 0 0.4rem !important;
+  color: var(--mu-fg) !important;
+}
+
+.project-tagline {
+  font-size: 1rem !important;
+  margin: 0 !important;
+  opacity: 1 !important;
+  font-weight: 400 !important;
+  color: var(--mu-dim) !important;
 }
 
 .site-nav {
@@ -311,7 +346,7 @@ body.is-home {
 }
 
 body.is-home .main-content {
-  max-width: 56rem;
+  max-width: 48rem;
   color: var(--mu-fg);
   background: #0f111a;
 }
@@ -334,17 +369,17 @@ body.is-home .site-footer {
   margin: 0;
   padding: 0;
   font-family: "Noto Sans Symbols 2", "Apple Symbols", "Segoe UI Symbol", ui-monospace, monospace;
-  font-size: clamp(0.7rem, 2.15vw, 1.35rem);
+  font-size: clamp(0.55rem, 1.7vw, 1.05rem);
   line-height: 1.12;
   white-space: pre;
   overflow: hidden;
 }
 
 .home-copy {
-  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
-  line-height: 1.65;
+  font-size: clamp(1rem, 0.4vw + 0.92rem, 1.125rem);
+  line-height: 1.6;
   color: var(--mu-fg);
-  max-width: 46rem;
+  max-width: 40rem;
   margin: 0 auto 2.2rem;
 }
 

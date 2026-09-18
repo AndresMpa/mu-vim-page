@@ -3,13 +3,13 @@
 @import "{{ site.theme }}";
 
 .page-header {
-  color: #8f93a2;
+  color: #c5c9d6;
   background-color: #0f111a;
   background-image: none;
 }
 
 .main-content {
-  color: #8f93a2;
+  color: #c5c9d6;
   background-color: #0f111a;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .site-footer {
-  color: #464b5d;
+  color: #8f93a2;
 }
 
 .site-footer a {
@@ -44,8 +44,12 @@
 
 .main-content {
   // Quoted so GitHub Pages' Sass 3.7 does not add rem + vw.
-  max-width: unquote("min(88rem, 94vw)");
-  padding: unquote("2rem clamp(1.25rem, 4vw, 4.5rem)");
-  font-size: unquote("clamp(1rem, 0.25vw + 0.95rem, 1.15rem)");
-  line-height: 1.65;
+  max-width: unquote("min(52rem, 94vw)");
+  padding: unquote("1.5rem clamp(1rem, 3vw, 2rem)");
+  font-size: 1rem;
+  line-height: 1.6;
 }
+
+.main-content h1 { font-size: 1.6rem; }
+.main-content h2 { font-size: 1.3rem; }
+.main-content h3 { font-size: 1.15rem; }

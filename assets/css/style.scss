@@ -34,8 +34,9 @@
 }
 
 .main-content {
-  max-width: min(88rem, 94vw);
-  padding: 2rem clamp(1.25rem, 4vw, 4.5rem);
-  font-size: clamp(1rem, 0.25vw + 0.95rem, 1.15rem);
+  // Quoted so GitHub Pages' Sass 3.7 does not add rem + vw.
+  max-width: unquote("min(88rem, 94vw)");
+  padding: unquote("2rem clamp(1.25rem, 4vw, 4.5rem)");
+  font-size: unquote("clamp(1rem, 0.25vw + 0.95rem, 1.15rem)");
   line-height: 1.65;
 }

@@ -384,8 +384,7 @@ body.is-home .site-footer {
   font-size: clamp(1rem, 0.4vw + 0.92rem, 1.125rem);
   line-height: 1.6;
   color: var(--mu-fg);
-  max-width: 40rem;
-  margin: 0 auto 2.2rem;
+  margin: 0 0 2.2rem;
 }
 
 .home-copy p {

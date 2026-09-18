@@ -1,19 +1,19 @@
 ---
 title: VimScript (LTS)
-description: Modular VimScript for Vim and Neovim. CoC, vim-plug, and the long-lived MμVim IDE.
+description: Modular VimScript for Vim and Neovim. CoC, vim-plug, Startify, and shared palettes.
 permalink: /vimscript/
 ---
 
 <span class="badge vimscript">VimScript · LTS</span>
 
-[mu-vim-vimscript](https://github.com/AndresMpa/mu-vim-vimscript) is Mini after it was split into sourced files. Same language, same plugin manager, same CoC layer, but each concern has a file. It's been the daily config for web work, some Python, bash, and dotfiles, and it still runs in **Vim and Neovim**.
+[mu-vim-vimscript](https://github.com/AndresMpa/mu-vim-vimscript) is Mini after it was split into sourced files. Same language, same plugin manager, same CoC layer, but each concern has a file. It still runs in **Vim and Neovim**.
 
 New features aren't invented here first. They show up on [Current]({{ '/lua/' | relative_url }}) and only come back if they still make sense in VimScript.
 
 ## Who it's for
 
 - People who want a full terminal IDE and are not ready to drop Vim
-- Web, Python, bash, GraphQL, Rust, and some R
+- Web, Python, bash, and Go via CoC
 - Anyone who prefers CoC + UltiSnips to Mason + nvim-cmp
 - Maintainers who like many small `.vim` files over one Lua tree
 
@@ -25,51 +25,47 @@ Skip it if Neovim-only is fine and you want Telescope. That's [Current]({{ '/lua
 
 | File | Role |
 | --- | --- |
-| `Basic.vim` | Core `set` options |
+| `Basic.vim` | Core `set` options, Startify viminfo |
 | `Plugin.vim` | vim-plug block |
-| `setUp/style.vim` | Theme, airline |
-| `setUp/navigation.vim` | NERDTree, fzf, EasyMotion |
+| `setUp/style.vim` | airline |
+| `setUp/greeter.vim` | Startify, Current's mark, Commands |
+| `setUp/navigation.vim` | NERDTree on the right, fzf modal |
 | `setUp/completion.vim` | CoC, UltiSnips, pairs |
-| `setUp/identation.vim` | indentLine, language syntax |
-| `Autocommands.vim` | Autosave and friends |
-| `Mapping.vim` + `util/Extention.vim` | Leader maps, terminal helper |
+| `setUp/identation.vim` | indentLine |
+| `Autocommands.vim` | Autosave (skips Startify and other special buffers) |
+| `Mapping.vim` + `util/Extention.vim` | Leader maps, terminal on the left |
 | `Update.vim` | Auto-update hook |
+| `themes/` | Shared palettes + `apply.vim` |
 
-`coc-settings.json` formats CSS and Markdown on save and registers a Dockerfile language server. UltiSnips here also include **Dockerfile** and **YAML**, which Mini doesn't.
-
-### Plugin groups
-
-From the repo's own summary:
-
-- **Motion:** tmux-navigator, minimap, EasyMotion, incsearch, NERDTree, fzf, ack
-- **Syntax:** polyglot, JS/TS/JSX, GraphQL, sxhkd, indentLine, rust.vim, shfmt, Nvim-R, fugitive, CoC
-- **Utilities:** markdown-preview, multi-cursor, nerdcommenter, vCoolor, Bracey, signify, css-color, vim-repeat
-- **Complete:** editorconfig, auto-pairs, surround, closetag, UltiSnips
-
-Optional extras the README calls out: [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) and [Ack](https://beyondgrep.com/install/) for project search, Node for CoC, shfmt for bash, R itself if you use Nvim-R.
+CoC uses **Biome**, Prettier, **Volar**, and **Go**. `<Space> h h` lists maps.
 
 ## Install
 
-Neovim or Vim, [vim-plug](https://github.com/junegunn/vim-plug), Node.js.
+Neovim or Vim. The installer pulls vim-plug, Node, and pnpm.
 
-```bash
-git clone https://github.com/AndresMpa/mu-vim-vimscript.git
-cd mu-vim-vimscript
+```
+git clone https://github.com/AndresMpa/mu-vim-vimscript.git ~/.config/nvim
+cd ~/.config/nvim
 ./install.sh
+nvim
 ```
 
-Then in the editor:
-
-```
-<Space> p i
-:source %
-:CocInstall
-:call mkdp#util#install()
-```
-
-`<Space> h h` opens the in-editor help map. The [cheat sheet]({{ '/cheat-sheet/' | relative_url }}) matches Mini and VimScript maps more closely than Current.
+Then `<Space> p i`, `:source %`, and `:CocInstall`.
 
 Windows: clone to `%LOCALAPPDATA%\nvim`.
+
+## Uninstall
+
+```
+cd ~/.config/nvim
+./delete.sh
+```
+
+Removes the config, vim-plug, CoC, cache, `old-nvim`, and `~/.config/muvim`. Leaves Neovim and package manager packages.
+
+## Themes
+
+Same palettes as Current. Default is **gruvbox**. `<Space> t h` opens the picker. Saved in `~/.config/muvim/active` and shared with Current and Mini.
 
 ## How to extend it
 

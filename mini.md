@@ -23,37 +23,48 @@ If you already know you want modules, stay on [VimScript]({{ '/vimscript/' | rel
 
 The file is grouped into "slides", comment banners of `"` characters, so open `init.vim` and jump between those headers.
 
+Startify is the greeter (`f` find files, `n` file tree, `g` git status). NERDTree opens on the right. Find files is a centered fzf modal. `<Ctrl-t>` opens a terminal on the left.
+
 | Slide | What it sets |
 | --- | --- |
 | Lines / style / mouse / status | `number`, `relativenumber`, `mouse=a`, clipboard, encoding |
-| Plugins | vim-plug: airline, NERDTree, fzf, CoC, fugitive, UltiSnips, Bracey, Nvim-R, … |
-| Plugin settings | airline theme, NERDTree flags, CoC extensions, gruvbox (commented) |
-| Mappings | leader, git, tree, search, buffers, terminal function |
+| Plugins | vim-plug: airline, NERDTree, fzf, CoC, fugitive, UltiSnips, Bracey, … |
+| Plugin settings | airline, NERDTree on the right, CoC, fzf window |
+| Mappings | leader, git, tree, search, buffers, terminal |
 
-Completion is **CoC** (`coc-prettier`, `coc-tsserver`, `coc-vetur`, HTML/CSS/JSON, shell, Rust, Solargraph, R), and snippets are **UltiSnips** for C++, CSS, HTML, JS/TS, Vue, Python, Markdown, shell, and a few others.
+Completion is **CoC**: Biome for JS/TS, Prettier for HTML/Markdown, Volar (`@yaegassy/coc-volar`) for Vue, and Go as the extra language server. Snippets are **UltiSnips**.
 
 There's no native LSP, and that's intentional.
 
 ## Install
 
-You need Vim or Neovim, then Node.js for CoC. vim-plug is fetched by the script.
+You need Vim or Neovim. The installer pulls vim-plug, Node, and pnpm.
 
-```bash
-git clone https://github.com/AndresMpa/mu-vim-mini.git
-cd mu-vim-mini
+```
+git clone https://github.com/AndresMpa/mu-vim-mini.git ~/.config/nvim
+cd ~/.config/nvim
 ./install.sh
-```
-
-The script installs vim-plug, offers pacman/apt help for Neovim and Node, and moves the clone to `~/.config/nvim` (it'll rename an existing config to `old-nvim`). After a new terminal:
-
-```
 nvim
-<Space> p i
-:source %
-:CocInstall
 ```
 
-Windows: clone into `%LOCALAPPDATA%\nvim` and run Plug / CoC by hand. There's no Lua installer here.
+On a Mac, install Homebrew first. The script uses `brew install` and does not need sudo.
+
+Then `<Space> p i`, `:source %`, and `:CocInstall`.
+
+Windows: clone into `%LOCALAPPDATA%\nvim` and run Plug / CoC by hand.
+
+## Uninstall
+
+```
+cd ~/.config/nvim
+./delete.sh
+```
+
+Removes the config, vim-plug, CoC, cache, `old-nvim`, and `~/.config/muvim`. Leaves Neovim and package manager packages.
+
+## Themes
+
+Same palettes as Current. Default is **mini**. `<Space> t h` opens the picker. The saved name in `~/.config/muvim/active` is shared with Current and VimScript.
 
 ## How to read it
 

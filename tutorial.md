@@ -1,29 +1,126 @@
 ---
 title: How to configure Neovim
-description: The original MμVim GitHub Pages tutorial — motions, init.vim, plugins, and mappings, from scratch.
+description: Install a MμVim flavor step by step, then the original walkthrough if you want to write init.vim yourself.
 permalink: /tutorial/
 ---
 
 <div class="callout">
 
-This is the walkthrough that used to live on github.io. It teaches you to **build** a config, so if you want to install Current, VimScript, or Mini instead, start on the [home page]({{ '/' | relative_url }}).
+Install one of the three configs first. The second half of this page is the older walkthrough if you want to **build** a file from scratch.
 
 </div>
 
-## Quick start
+## Install a flavor, step by step
 
-The easy way is still to clone a finished config and run its installer. Current:
+### 1. Pick one
 
-```bash
+| You want | Use |
+| --- | --- |
+| Neovim, Lua, Mason, Telescope | [Current]({{ '/lua/' | relative_url }}) |
+| Vim or Neovim, modules, CoC | [VimScript]({{ '/vimscript/' | relative_url }}) |
+| One `init.vim`, a server, a template | [Mini]({{ '/mini/' | relative_url }}) |
+
+[Compare]({{ '/compare/' | relative_url }}) is the longer table.
+
+### 2. Prerequisites
+
+- **Current:** Neovim and Lua (`lua`, `lua5.4`, or `luajit`). Not Vim.
+- **Mini / VimScript:** Neovim or Vim. The installer pulls Node and pnpm for CoC.
+- **macOS:** [Homebrew](https://brew.sh) first. The scripts use `brew install` and do not need sudo.
+- **Windows:** `%LOCALAPPDATA%\nvim`. Current still wants `lua install.lua`; Mini/VimScript run Plug by hand.
+
+### 3. Clone into the config dir
+
+Linux and macOS — pick the repo:
+
+```
 git clone https://github.com/AndresMpa/mu-vim.git ~/.config/nvim
-cd ~/.config/nvim && lua install.lua
+# or mu-vim-vimscript, or mu-vim-mini
+cd ~/.config/nvim
 ```
 
-VimScript and Mini use `./install.sh` in their own repos. Follow the prompts, then open the editor.
+If `~/.config/nvim` already exists, rename it first (`mv ~/.config/nvim ~/.config/nvim.bak`).
 
-The rest of this page is the longer way: you make the file yourself.
+### 4. Run the installer
 
-## A longer way to make this
+Current:
+
+```
+lua install.lua
+```
+
+Mini or VimScript:
+
+```
+./install.sh
+```
+
+Follow the prompts. The installer talks to your package manager (pacman, apt, dnf, or Homebrew).
+
+### 5. Open the editor once
+
+```
+nvim
+```
+
+Current: pckr clones plugins. When it finishes, `:qa` and open `nvim` again.
+
+Mini / VimScript: Startify (or a blank buffer). Then:
+
+```
+<Space> p i
+:source %
+:CocInstall
+```
+
+### 6. Check health
+
+```
+:checkhealth
+```
+
+Missing `fd`, a C compiler (Treesitter on Current), or Node (CoC) show up here.
+
+### 7. Themes
+
+`<Space> t h` opens the palette modal. Move the cursor to preview, Enter to save, Esc to cancel. The name is stored in `~/.config/muvim/active` and is shared if you later switch flavors.
+
+Defaults: Current **deep-ocean**, VimScript **gruvbox**, Mini **mini**.
+
+### 8. Daily maps
+
+| Do this | Keys |
+| --- | --- |
+| File tree (right) | <kbd>Space</kbd> <kbd>n</kbd> |
+| Find files | <kbd>Space</kbd> <kbd>t</kbd> <kbd>f</kbd> (Current) or <kbd>Space</kbd> <kbd>f</kbd> <kbd>f</kbd> (Mini/VimScript) |
+| Git status | <kbd>Space</kbd> <kbd>g</kbd> <kbd>s</kbd> <kbd>t</kbd> |
+| New terminal (left) | <kbd>Ctrl</kbd> <kbd>t</kbd> |
+| Close window / terminal | <kbd>Space</kbd> <kbd>q</kbd> |
+| Format (Current) | <kbd>Space</kbd> <kbd>f</kbd> |
+
+The [cheat sheet]({{ '/cheat-sheet/' | relative_url }}) has the rest.
+
+### 9. Uninstall
+
+Current:
+
+```
+cd ~/.config/nvim
+lua delete.lua
+```
+
+Mini / VimScript:
+
+```
+cd ~/.config/nvim
+./delete.sh
+```
+
+Confirm with `y`. That also removes `~/.config/muvim`. Neovim itself stays.
+
+---
+
+## A longer way: write the file yourself
 
 It's important to understand that you are making a custom configuration. You are the person who is going to maintain those files. Downloading someone else's config (like mine) is less work, but it also means you are not in the maintenance loop unless you change `init.vim` / `init.lua` yourself. A terminal editor without that loop is missing the useful part of it. So start with the Vim tutorial, then write the file.
 

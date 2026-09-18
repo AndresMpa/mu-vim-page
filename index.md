@@ -2,6 +2,7 @@
 title: MμVim
 description: Three Vim/Neovim configs. Current, VimScript, and Mini.
 permalink: /
+image: /assets/img/muVim.png
 ---
 
 <div class="mu-hero" aria-label="MμVim">

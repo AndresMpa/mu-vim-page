@@ -353,7 +353,6 @@ body.is-home {
 }
 
 body.is-home .main-content {
-  max-width: 48rem;
   color: var(--mu-fg);
   background: #0f111a;
 }

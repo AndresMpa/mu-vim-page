@@ -3,9 +3,14 @@
 @import "{{ site.theme }}";
 
 .page-header {
-  color: #fff;
-  background-color: #000;
+  color: #8f93a2;
+  background-color: #0f111a;
   background-image: none;
+}
+
+.main-content {
+  color: #8f93a2;
+  background-color: #0f111a;
 }
 
 .main-content h1,
@@ -14,23 +19,27 @@
 .main-content h4,
 .main-content h5,
 .main-content h6 {
-  color: #413a96;
+  color: #82aaff;
 }
 
 .main-content h1 {
-  color: #009930;
+  color: #84ffff;
 }
 
 .main-content a {
-  color: #413a96;
+  color: #c792ea;
 }
 
 .main-content a:hover {
-  color: #009930;
+  color: #84ffff;
+}
+
+.site-footer {
+  color: #464b5d;
 }
 
 .site-footer a {
-  color: #009930;
+  color: #89ddff;
 }
 
 .main-content {

@@ -58,9 +58,13 @@ body {
 }
 
 .brand-mark {
-  margin: 0 0 0.75rem;
+  position: absolute;
+  left: 1.5rem;
+  top: 1.25rem;
+  margin: 0;
   font-size: 0.95rem;
   letter-spacing: 0.12em;
+  text-align: left;
 }
 
 .brand-mark a {
@@ -75,14 +79,9 @@ body {
 }
 
 .page-header {
-  padding: 1.25rem 1.5rem 1.5rem;
-  text-align: left !important;
-}
-
-.brand-mark,
-.project-name,
-.project-tagline {
-  text-align: left;
+  position: relative;
+  padding: 2.75rem 1.5rem 1.5rem;
+  text-align: center;
 }
 
 .project-name {

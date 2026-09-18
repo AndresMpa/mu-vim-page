@@ -11,6 +11,7 @@
 .main-content {
   color: #c5c9d6;
   background-color: #0f111a;
+  max-width: none;
 }
 
 .main-content h1,
@@ -44,10 +45,15 @@
 
 .main-content {
   // Quoted so GitHub Pages' Sass 3.7 does not add rem + vw.
-  max-width: unquote("min(52rem, 94vw)");
   padding: unquote("1.5rem clamp(1rem, 3vw, 2rem)");
   font-size: 1rem;
   line-height: 1.6;
+}
+
+@media screen and (min-width: 64em) {
+  .main-content {
+    max-width: none;
+  }
 }
 
 .main-content h1 { font-size: 1.6rem; }

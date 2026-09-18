@@ -14,14 +14,13 @@
   <body class="{% if page.permalink == '/' %}is-home{% endif %}" data-baseurl="{{ site.baseurl }}">
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
+    {% unless page.permalink == '/' %}
     <header class="page-header" role="banner">
-      {% unless page.permalink == '/' %}
       <p class="brand-mark"><a href="{{ '/' | relative_url }}">MμVim</a></p>
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% endunless %}
-      {% include nav.html %}
     </header>
+    {% endunless %}
 
     <main id="content" class="main-content" role="main">
       {{ content }}
